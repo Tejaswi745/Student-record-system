@@ -18,7 +18,8 @@ int main() {
         printf("1. Add Student\n");
         printf("2. View Students\n");
         printf("3. Search Student\n");
-        printf("4. Exit\n");
+        printf("4. Delete Student\n");
+        printf("5. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
@@ -72,8 +73,35 @@ int main() {
                 }
                 break;
             }
+             case 4: {
+                   int deleteRoll;
+                   int found = 0;
 
-            case 4:
+      printf("Enter Roll Number to Delete: ");
+      scanf("%d", &deleteRoll);
+
+    for(int i = 0; i < count; i++) {
+        if(students[i].roll == deleteRoll) {
+
+            for(int j = i; j < count - 1; j++) {
+                students[j] = students[j + 1];
+            }
+
+            count--;
+            found = 1;
+            printf("Student Delete Successfully!\n");
+            break;
+        }
+    }
+
+    if(!found) {
+        printf("Student Not Found!\n");
+    }
+
+    break;
+}
+
+            case 5:
                 printf("Exiting Program...\n");
                 exit(0);
 
