@@ -19,7 +19,8 @@ int main() {
         printf("2. View Students\n");
         printf("3. Search Student\n");
         printf("4. Delete Student\n");
-        printf("5. Exit\n");
+        printf("5. Update Student\n");
+        printf("6. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
@@ -100,8 +101,36 @@ int main() {
 
     break;
 }
+            case 5: {
+                int updateRoll;
+                int found = 0;
 
-            case 5:
+       printf("Enter Roll Number to Update: ");
+       scanf("%d", &updateRoll);
+
+    for(int i = 0; i < count; i++) {
+        if(students[i].roll == updateRoll) {
+
+            printf("Enter New Name: ");
+            scanf("%s", students[i].name);
+
+            printf("Enter New Marks: ");
+            scanf("%f", &students[i].marks);
+
+            printf("Student Updated Successfully!\n");
+            found = 1;
+            break;
+        }
+    }
+
+    if(!found) {
+        printf("Student Not Found!\n");
+    }
+
+    break;
+}
+
+            case 6:
                 printf("Exiting Program...\n");
                 exit(0);
 
