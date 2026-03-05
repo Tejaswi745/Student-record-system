@@ -1,4 +1,20 @@
  # Student Record System in C
 
-This project is a simple Student Record System developed using C programming. 
-It allows users to add, view, search, delete and update student records using a menu-driven program.
+## 📌 Description
+This is a simple Student Record System developed using C programming.
+
+## ⚙️ Features
+- Add Student
+- View Students
+- Search Student
+- Delete Student
+
+## 🛠️ Technologies Used
+- C Programming
+
+## ▶️ How to Run
+1. Compile the program
+2. Run the executable file
+
+## 👩‍💻 Author
+Tejaswi
